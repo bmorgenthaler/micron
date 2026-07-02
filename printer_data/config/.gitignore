@@ -1,0 +1,11 @@
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+Session.vim
+tags
+*.bkp
+*.lnk
+ShakeTune_results/
+config_backups/
