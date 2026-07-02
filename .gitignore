@@ -1,11 +1,11 @@
-# Vim
+.env
+secrets.conf
 *.swp
-*.swo
-*~
-.netrwhist
-Session.vim
-tags
+*.tmp
+printer-[0-9]*_[0-9]*.cfg
+*.bak
 *.bkp
-*.lnk
-ShakeTune_results/
-config_backups/
+*.csv
+*.zip
+ShakeTune_results
+.git
