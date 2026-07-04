@@ -6,6 +6,8 @@
 Session.vim
 tags
 *.bkp
+*.bak
 *.lnk
 ShakeTune_results/
 config_backups/
+gcodes-*.zip
