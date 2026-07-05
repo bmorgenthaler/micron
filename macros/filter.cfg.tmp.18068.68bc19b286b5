@@ -1,0 +1,18 @@
+[delayed_gcode filter_off]
+gcode:
+    SET_FAN_SPEED FAN=filter SPEED=0
+
+[delayed_gcode chamber_fan_off]
+gcode:
+    SET_HEATER_TEMPERATURE HEATER=chamber TARGET=0
+    {action_call_remote_method("notify",
+                               name="gcode_pushover",
+                               message="Air circulation complete — safe to open.")}
+
+[gcode_macro TOGGLE_FILTER]
+gcode:
+    {% if printer['fan_generic filter'].speed > 0 %}
+        SET_FAN_SPEED FAN=filter SPEED=0
+    {% else %}
+        SET_FAN_SPEED FAN=filter SPEED=1
+    {% endif %}
